@@ -1,5 +1,5 @@
 import SideBar from '../Sidebar/Index'
-import Content from '../Content/Index'
+import Content from '../Movies/Index'
 
 import './Index.css'
 
