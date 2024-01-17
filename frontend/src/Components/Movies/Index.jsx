@@ -1,9 +1,9 @@
 import './Index.css'
 
-function Content() {
+function Movies() {
   return (
-    <div className="Content"></div>
+    <div className="Movies"></div>
   )
 }
 
-export default Content
+export default Movies;

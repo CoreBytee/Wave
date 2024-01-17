@@ -1,5 +1,5 @@
 import SideBar from '../Sidebar/Index'
-import Content from '../Movies/Index'
+import Movies from '../Movies/Index'
 
 import { useState as UseState } from 'react'
 
@@ -10,14 +10,10 @@ function App() {
 
     let ContentElement
 
-    if (CurrentView == "Movies") {
-        ContentElement = <Content />
-    }
-
     return (
         <div className="App">
             <SideBar CurrentView={CurrentView} SetCurrentView={SetCurrentView} />
-            {ContentElement}
+            {CurrentView === "Movies" && <Movies/>}
         </div>
     )
 }
