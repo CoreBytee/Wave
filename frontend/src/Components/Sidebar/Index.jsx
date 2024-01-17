@@ -11,9 +11,9 @@ function SideBar(
     return (
         <div className="SideBar">
             <img src={Icon} className="logo" alt="Logo" />
-            <i onClick={() => SetCurrentView("Movies")} className="bi bi-house "></i>
-            <i onClick={() => SetCurrentView("Saved")}  className="bi bi-heart "></i>
-            <i onClick={() => SetCurrentView("Search")} className="bi bi-search"></i>
+            <i onClick={() => SetCurrentView("Movies")} className={"bi bi-house "  + (CurrentView == "Movies" ? "Selected" : "")}></i>
+            <i onClick={() => SetCurrentView("Saved")}  className={"bi bi-heart "  + (CurrentView == "Saved" ?  "Selected" : "")}></i>
+            <i onClick={() => SetCurrentView("Search")} className={"bi bi-search " + (CurrentView == "Search" ? "Selected" : "")}></i>
         </div>
     )
 }

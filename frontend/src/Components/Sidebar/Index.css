@@ -23,6 +23,12 @@
     font-size: 25px;
 }
 
+.SideBar .Selected {
+    color: #2e9cc6 !important;
+    font-size: 25px;
+    cursor: default;
+}
+
 .SideBar .logo {
     width: 100%;
     justify-self: start;
