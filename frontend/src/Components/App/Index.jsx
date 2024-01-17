@@ -8,7 +8,9 @@ import { useState as UseState } from 'react'
 import './Index.css'
 
 function App() {
-    const [CurrentView, SetCurrentView] = UseState("Movies")
+    const [CurrentView, SetCurrentView] = UseState(localStorage.ViewState || "Movies")
+    localStorage.ViewState = CurrentView
+
 
     return (
         <div className="App">
