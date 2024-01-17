@@ -15,7 +15,7 @@ function App() {
     }
 
     return (
-        <div className="App container-fluid px-0">
+        <div className="App">
             <SideBar CurrentView={CurrentView} SetCurrentView={SetCurrentView} />
             {ContentElement}
         </div>
