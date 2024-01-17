@@ -1,8 +1,14 @@
+import SideBar from '../Sidebar/Index'
+import Content from '../Content/Index'
+
 import './Index.css'
 
 function App() {
   return (
-    <a>Hello</a>
+    <div className="App container-fluid px-0">
+        <SideBar />
+        <Content />
+    </div>
   )
 }
 

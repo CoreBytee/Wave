@@ -1,9 +1,9 @@
 import './Index.css'
 
 function SideBar() {
-  return (
-    <a>Hello</a>
-  )
+    return (
+        <div className="SideBar"></div>
+    )
 }
 
 export default SideBar

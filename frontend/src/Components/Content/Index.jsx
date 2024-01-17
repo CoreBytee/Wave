@@ -2,7 +2,7 @@ import './Index.css'
 
 function Content() {
   return (
-    <a>Hello</a>
+    <div className="Content"></div>
   )
 }
 
