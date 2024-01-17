@@ -1,4 +1,29 @@
 .SideBar {
     width: 70px;
     height: 100vh;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+
+    padding: 15px;
+    gap: 10px;
+}
+
+.SideBar i {
+    color: white;
+    transition: font-size 0.5s;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.SideBar i:hover {
+    color: #2e9cc6;
+    font-size: 25px;
+}
+
+.SideBar .logo {
+    width: 100%;
+    justify-self: start;
 }
