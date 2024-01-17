@@ -10,7 +10,7 @@ import './Index.css'
 function App() {
     const [CurrentView, SetCurrentView] = UseState(localStorage.ViewState || "Movies")
     localStorage.ViewState = CurrentView
-
+    location.hash = CurrentView
 
     return (
         <div className="App">
