@@ -13,7 +13,6 @@ function SearchView() {
                 const MovieResponse = await fetch("https://annexbios.gluwebsite.nl/api/main.php")
                 const MovieData = await MovieResponse.json()
 
-                console.log(MovieData)
                 SetMovies(MovieData)
             }
 
