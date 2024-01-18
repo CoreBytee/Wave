@@ -9,7 +9,13 @@ function MovieDetails(
         SetVisible
     }
 ) {
+    const [FavouriteState, SetFavouriteState] = UseState(localStorage[`MovieFavourite-${Id}`] || false)
     const [MovieDetails, SetMovieDetails] = UseState({})
+
+    function ToggleFavourite() {
+        SetFavouriteState(!FavouriteState)
+        localStorage[`MovieFavourite-${Id}`] = !FavouriteState
+    }
 
     async function FetchMovieDetails() {
         const MovieDetailsResponse = await fetch(`https://annexbios.gluwebsite.nl/api/main.php?id=${Id}`)
@@ -33,6 +39,13 @@ function MovieDetails(
         TrailerEmbedLink = `https://www.youtube-nocookie.com/embed/${TrailerId}?playlist=${TrailerId}&autoplay=1&mute=1&controls=0&loop=1`
     }
 
+    let FavouriteButton
+    if (FavouriteState) {
+        FavouriteButton = <button type="button" className="btn btn-success" onClick={ToggleFavourite}><i className="bi bi-heartbreak-fill"></i> Unfavourite</button>
+    } else {
+        FavouriteButton = <button type="button" className="btn btn-success" onClick={ToggleFavourite}><i className="bi bi-heart-fill"></i> Favourite</button>
+    }
+
     return (
         <div className={`MovieDetails ${Visible ? "shown" : ""}`}>
             <div className='Container'>
@@ -43,7 +56,7 @@ function MovieDetails(
                         <h1>{MovieDetails.name}</h1>
                         <div className='actionrow'>
                             <button type="button" className="btn btn-success"><i className="bi bi-play-fill"></i>Watch</button>
-                            <button type="button" className="btn btn-success"><i className="bi bi-heart-fill"></i> Favourite</button>
+                            {FavouriteButton}
                         </div>
                     </div>
                 </div>
