@@ -27,6 +27,7 @@
 
 .MovieDetails.shown {
     backdrop-filter: blur(2px) brightness(90%);
+    pointer-events: all;
 }
 
 .MovieDetails.shown .Container {
