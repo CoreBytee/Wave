@@ -1,0 +1,43 @@
+.movie-lead{
+    margin: auto;
+    background-color: #5e5e5e;
+    width: 70%;
+}
+
+.movie-lead > div{
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.lead-trailer{
+    width: 300%;
+    height: 100%;
+    margin-left: -100%;
+}
+.youtube-container {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/9;
+    pointer-events: none;
+}
+
+
+.lead-content{
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    /*z-index: 1;*/
+    bottom: 1%;
+    position: absolute;
+}
+.lead-content > *{
+    margin: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.lead-bar{
+    display: flex;
+    justify-content: space-between;
+}

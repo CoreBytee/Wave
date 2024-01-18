@@ -1,5 +1,5 @@
 import SideBar from '../Sidebar/Index'
-import Movies from '../Movies/Index'
+import Movies from '../Movies/Movies.jsx'
 import SavedView from '../SavedView/Index'
 import SearchView from '../SearchView/Index'
 
