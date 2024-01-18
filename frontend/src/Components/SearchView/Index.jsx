@@ -4,8 +4,13 @@ import MovieCard from '../MovieCard/Index'
 
 import './Index.css'
 
+function TitleCase(Str) {
+    return Str.charAt(0).toUpperCase() + Str.substr(1).toLowerCase();
+}
+
 function SearchView() {
     const [Movies, SetMovies] = UseState([])
+    const [Query, SetQuery] = UseState("")
 
     async function FetchMovies() {
         const MovieResponse = await fetch("https://annexbios.gluwebsite.nl/api/main.php")
@@ -21,17 +26,17 @@ function SearchView() {
 
     return (
         <div className="SearchView">
-            <input type="text" placeholder="Enter query" ></input>
+            <input value={TitleCase(Query)} onChange={(E) => SetQuery(E.target.value.toLowerCase())} type="text" placeholder="Enter query" ></input>
             <div className='cardlist'>
                 {
                     (
-                        Movies.map(
+                        Movies.filter(M => { return !M.name.toLowerCase().search(Query) }).map(
                             Movie => {
                                 return (
                                     <MovieCard
                                         key={Movie.id}
                                         Id={Movie.id}
-                                        Title={Movie.title}
+                                        Title={Movie.name}
                                         ImgUrl={Movie.poster}
                                     />
                                 )
