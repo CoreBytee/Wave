@@ -10,6 +10,7 @@
     backdrop-filter: blur(0px) brightness(100%);
     transition: backdrop-filter 0.5s ease-in-out;
     pointer-events: none;
+    cursor: default;
 }
 
 .MovieDetails .Container {
@@ -22,7 +23,6 @@
     pointer-events: all;
     transform: translateY(-200%);
     transition: transform 0.2s ease-in-out;
-    cursor: default;
 }
 
 .MovieDetails.shown {
