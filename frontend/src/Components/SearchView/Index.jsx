@@ -34,6 +34,7 @@ function SearchView() {
                             Movie => {
                                 return (
                                     <MovieCard
+                                        key={Movie.id}
                                         Id={Movie.id}
                                         Title={Movie.title}
                                         ImgUrl={Movie.poster}
