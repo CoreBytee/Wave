@@ -53,6 +53,7 @@ function MovieDetails(
                     <i className="bi bi-x-lg closebutton" onClick={() => {SetVisible(false)}}></i>
                     <iframe src={TrailerEmbedLink} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     <div className='textcontainer'>
+                        <h6 style={{"margin-bottom": 0}}>{MovieDetails.directors}</h6>
                         <h1>{MovieDetails.name}</h1>
                         <div className='actionrow'>
                             <button type="button" className="btn btn-success"><i className="bi bi-play-fill"></i>Watch</button>
