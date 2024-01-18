@@ -3,8 +3,6 @@
     aspect-ratio: 2/3;
     cursor: pointer;
     border-radius: 20px;
-
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .MovieCard img {
@@ -14,7 +12,11 @@
     border-radius: 20px;
 }
 
-.MovieCard:hover {
+.MovieCard.animations {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.MovieCard:hover.animations {
     box-shadow: 10px 8px 10px #2e9cc6;
     transform: translateY(-2px);
 }
